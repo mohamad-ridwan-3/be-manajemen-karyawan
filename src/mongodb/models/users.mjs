@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-// id user | admin
+// id User | Admin
 const users = new Schema(
   {
     id: {
