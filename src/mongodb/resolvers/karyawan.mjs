@@ -12,20 +12,22 @@ async function postKaryawan(variable){
         tglLahir,
         divisi,
         gaji,
+        tglBergabung,
+        statusKaryawan
     } = variable
 
-    async function validateUser(){
-        try {
-            const isUser = await usersDB.findOne({role: 'User', id, isVerification: true})
-            return isUser
-        } catch (error) {
-            return error            
-        }
-    }
-    const isUser = await validateUser()
-    if(isUser?.role !== 'User'){
-        throw new Error('data user tidak terdaftar')
-    }
+    // async function validateUser(){
+    //     try {
+    //         const isUser = await usersDB.findOne({role: 'User', id, isVerification: true})
+    //         return isUser
+    //     } catch (error) {
+    //         return error            
+    //     }
+    // }
+    // const isUser = await validateUser()
+    // if(isUser?.role !== 'User'){
+    //     throw new Error('data user tidak terdaftar')
+    // }
 
     async function checkUserInKaryawan(){
         try {
@@ -50,8 +52,8 @@ async function postKaryawan(variable){
             tglLahir,
             divisi,
             gaji,
-            tglBergabung: setDate(new Date()),
-            statusKaryawan: 'Aktif'
+            tglBergabung,
+            statusKaryawan
         })
 
         try {

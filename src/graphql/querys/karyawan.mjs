@@ -7,7 +7,9 @@ postKaryawan(
     noTelp: String!,
     tglLahir: String!,
     divisi: String!,
-    gaji: String!
+    gaji: String!,
+    tglBergabung: String!,
+    statusKaryawan: String!
 ): ResultPostKaryawan
 `
 

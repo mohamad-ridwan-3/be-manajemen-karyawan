@@ -9,6 +9,7 @@ type DataKaryawan {
     divisi: String!
     gaji: String!
     tglBergabung: String!
+    statusKaryawan: String!
 }
 `
 
