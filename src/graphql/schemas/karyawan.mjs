@@ -15,7 +15,7 @@ type DataKaryawan {
 
 const resultPostKaryawan = `
 type ResultPostKaryawan {
-    data: DataKaryawan!
+    data: DataKaryawan
 }
 `
 
